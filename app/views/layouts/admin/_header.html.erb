@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-sm" style="background-color:#898a5ef2!important;">
   <div class="container">
     <ul class="navbar-nav">
-      <a class="navbar-brand" href="#">
-      <img src="/app/assets/images/beta.png" alt="" width="30" height="24">
-    </a>
+      <li>
+        <%= image_tag("beta.png", alt: "logo", class: 'navbar-brand', style: "height:40px;")%>
+      </li>
       <li class="nav-item <%= current_page?(admin_root_path)? 'active' : '' %> ">
         <%= link_to("Home", admin_root_path, class: "nav-link") %>
       </li>
@@ -23,7 +23,7 @@
           <div class="py-2 mr-4" style="color:#fff;"><%= current_admin.name %></div>
         </li>
         <li class="nav-item">
-          <%= link_to("Sair", destroy_admin_session_path, method: :delete, class: "nav-link")%>
+          <%= button_to("Sair", destroy_admin_session_path, method: :delete, class: "nav-link")%>
         </li>
       </ul>
     </div>

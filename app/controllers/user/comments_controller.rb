@@ -7,7 +7,7 @@ class User::CommentsController < UserController
 
     if @comment.save
       respond_to do |format|
-        format.js { render "create" }
+        format.js { render 'create' }
       end
     end
   end
@@ -18,7 +18,7 @@ class User::CommentsController < UserController
 
     if @comment.destroy
       respond_to do |format|
-        format.js { render "destroy" }
+        format.js { render 'destroy' }
       end
     end
   end
